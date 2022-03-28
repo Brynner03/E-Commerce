@@ -1,4 +1,4 @@
-# E-Commerce
+# E-Commerce Website
 This is my version of an E-Commerce site. This is a MERN Stack project for Unit 2 at General Assembly.
 
 ## What will it consist?
