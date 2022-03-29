@@ -204,6 +204,105 @@ const main = async () => {
     })
     simien_tennis_elbow_brace.save()
 
+    const mighty_patch_original_from_hero_cosmetics = await new Items({
+        name: "Mighty Patch Original from Hero Cosmetics",
+        price: "12.99",
+        description: "🏆 The Original Award-Winning Acne Patch – Mighty Patch is a hydrocolloid sticker that improves the look of pimples overnight without the popping. Just stick it on, get some sleep, and wake up with clearer-looking skin.",
+        img: "https://m.media-amazon.com/images/I/41O3SOVUBJL._SL1080_.jpg",
+        department:  "Beauty"
+
+    })
+    mighty_patch_original_from_hero_cosmetics.save()
+
+    const neutrogena_day_night_wipes_with_makeup_remover_face_cleansing_towelettes = await new Items({
+        name: "Neutrogena Day & Night Wipes with Makeup Remover Face Cleansing Towelettes",
+        price: "13.99",
+        description: "3-pack which includes two 25-count packs of Neutrogena Makeup Remover Cleansing Towelettes and one 25-count pack of Neutrogena Makeup Remover Night Calming Cleansing Towelettes made from sustainably sourced, 100% plant-based fibers",
+        img: "https://m.media-amazon.com/images/I/71x40V-472L._SL1500_.jpg",
+        department:  "Beauty"
+
+    })
+    neutrogena_day_night_wipes_with_makeup_remover_face_cleansing_towelettes.save()
+
+    const multi_purpose_exfoliating_dermaplaning_tool = await new Items({
+        name: "Multi-purpose Exfoliating Dermaplaning Tool",
+        price: "5.99",
+        description: "Touch-ups are quick and easy with this versatile beauty tool that shapes eyebrows, removes fine hairs, and even smoothens skin",
+        img: "https://i5.walmartimages.com/asr/5cad8ab6-3977-4db8-8b7b-017c4c68701b_1.697f8902830aa6875edd21e5559fbc61.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+        department:  "Beauty"
+
+    })
+    multi_purpose_exfoliating_dermaplaning_tool.save()
+
+    const cerave_moisturizing_cream_combo_pack = await new Items({
+        name: "CeraVe Moisturizing Cream and Hydrating Face Wash Trial Combo | 12oz Cream + 3oz Travel Size Cleanser",
+        price: "14.99",
+        description: "[ MOISTURIZING CREAM & HYDRATING FACE WASH BUNDLE ] Contains 12oz CeraVe Moisturizing Cream Plus a 3oz Travel Size of CeraVe Hydrating Facial Cleanser. [ ESSENTIAL CERAMIDES ] Making up 50% of the skin's natural barrier, ceramides are essential to maintaining healthy skin. All CeraVe products are formulated with three essential ceramides (1, 3, 6-II) to help restore the protective skin barrier.",
+        img: "https://img.chewy.com/is/image/catalog/282303_MAIN._AC_SS600_V1628863700_.jpg",
+        department:  "Beauty"
+
+    })
+    cerave_moisturizing_cream_combo_pack.save()
+
+    const bio_oil_skincare = await new Items({
+        name: "Bio-Oil Skincare Oil, Body Oil for Scars and Stretch Marks, Hydrates Skin, Non-Greasy, Dermatologist Recommended, Non-Comedogenic, Travel Size, 0.85 Ounces, Pack of 3, For All Skin Types, Vitamin A, E",
+        price: "17.99",
+        description: "IMPROVES APPEARANCE OF ACNE SCARS AND STRETCH MARKS - Clinically proven and dermatologist recommended to help repair skin damage and scars from pregnancy, surgery, injury, acne, C-section, aging, and more. Bio-Oil is non comedogenic so it can be used as an acne scar treatment for face and skin repair. So, if you have extra time to organize your skin care cabinet, keep Bio-Oil front and center as your go-to acne scar remover",
+        img: "https://m.media-amazon.com/images/I/51O7DvtsDZL.jpg",
+        department:  "Beauty"
+
+    })
+    bio_oil_skincare.save()
+
+    const neutrogena_makeup_remover_facial_cleansing_towelette_singles = await new Items({
+        name: "Neutrogena Makeup Remover Facial Cleansing Towelette Singles, Daily Face Wipes Remove Dirt, Oil, Makeup & Waterproof Mascara, Gentle, Individually Wrapped, 100% Plant-Based Fibers, 20 ct",
+        price: "5.99",
+        description: "20-count of individually wrapped pre-moistened Neutrogena Makeup Remover Face Wipe Singles. Individually wrapped facial cleansing towelettes are protected so you always have a fresh and effective wipe for complete cleansing and makeup removal",
+        img: "https://m.media-amazon.com/images/I/71OMPXoZIqL._SL1500_.jpg",
+        department:  "Beauty"
+
+    })
+    neutrogena_day_night_wipes_with_makeup_remover_face_cleansing_towelettes.save()
+
+    const nizoral_anti_dandruff_shampoo = await new Items({
+        name: "Nizoral Anti-Dandruff Shampoo, 7Oz",
+        price: "14.99",
+        description: "CLINICALLY PROVEN: Dandruff stays off your head & shoulders with this dandruff treatment shampoo that helps relieve itchy & flaky scalps. When using your regular shampoo and conditioner use twice a week between washes. Works on all hair types & gray hair.",
+        img: "https://m.media-amazon.com/images/I/71+CaUj9EtL._SL1500_.jpg",
+        department:  "Beauty"
+
+    })
+    nizoral_anti_dandruff_shampoo.save()
+
+    const kiss_strip_eyelash_adhesive = await new Items({
+        name: "KISS Strip Eyelash Adhesive, Clear 0.176 Oz KPLGL01",
+        price: "2.99",
+        description: "Secure lash extensions with ease with KISS Strip Lash Adhesive. This special adhesive delivers a strong secure hold and works with every length of eyelash extensions. The strip lash adhesive with aloe is hypoallergenic, odorless, latex and formaldehyde-free and dries clear for invisible, effortless wear. It's also waterproof, contact lens friendly and cruelty-free. Soothing aloe nurtures your lash line as it locks lashes in place, holding firm no matter how much mascara you apply or how long you wear your lash extensions. Each bottle of latex-free eyelash glue comes with an applicator brush for precise, mess-free applications. It's available in a compact 0.21 fl oz tube.",
+        img: "https://m.media-amazon.com/images/I/51imCpzKbjL._AC_SL1000_.jpg",
+        department:  "Beauty"
+
+    })
+    kiss_strip_eyelash_adhesive.save()
+
+    const hair_shampoo_brush = await new Items({
+        name: "Hair Shampoo Brush, HEETA Scalp Care Hair Brush with Soft Silicone Scalp Massager",
+        price: "7.99",
+        description: "Manual operation. Waterproof. Perfect for various hairstyles from thick to thin, short or long, and no matter wet or dry, even to groom hair of your pets",
+        img: "https://m.media-amazon.com/images/I/61aQt6lRLvL._SL1500_.jpg",
+        department:  "Beauty"
+
+    })
+    hair_shampoo_brush.save()
+
+    const dove_body_wash = await new Items({
+        name: "Dove Purely Pampering Body Wash for Dry Skin Coconut Butter and Cocoa Butter Effectively Washes Away Bacteria While Nourishing Your Skin 22 oz, 4 count",
+        price: "24.99",
+        description: "Pampers and softens skin: Dove Restoring Body Wash combines Moisture Renew Blend with nourishing coconut butter and cocoa butter for soft and smooth skin, unlike ordinary body soap or shower gel",
+        img: "https://m.media-amazon.com/images/I/71xq89oUzzL._SL1500_.jpg",
+        department:  "Beauty"
+
+    })
+    dove_body_wash.save()
 
 
 }
