@@ -2,8 +2,8 @@ const db = require('./db')
 const { Items } = require('./models')
 
 const findAllItems = async () => {
-    const parks = await Items.find()
-    console.log( 'Parks: ', parks)
+    const Items = await Items.find()
+    console.log( 'Items: ', Items)
 }
 
 
