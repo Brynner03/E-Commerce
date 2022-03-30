@@ -8,7 +8,7 @@ function Header(props) {
 
         <div className="header__search">
             <input
-            className="header__searchInput" type="text" value={props.value}/>
+            className="header__searchInput" type="text" value={props.value} placeholder= 'Search one of our many products!'/>
             <button onClick={props.onSubmit}>Submit</button>
 
         <div className="header__nav">
