@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     res.send('This is root!')
 })
 
-app.get('/api/items', async (req, res) => {
+app.get('/api', async (req, res) => {
     const allItems = await Items.find()
     console.log(`All Items should arrive!`)
     res.json(allItems);

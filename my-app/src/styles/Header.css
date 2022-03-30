@@ -7,9 +7,44 @@
   z-index: 100;
 }
 
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border-color: 3px black;
+  width: 100%;
+}
 .gymshark_logo {
   width: 100px;
   object-fit: contain;
   margin: 0 20px;
   margin-top: 18px;
+}
+.search___icon {
+  padding: 5px;
+  height: 22px !important;
+}
+.nav_option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav__option1 {
+  font-size: 10px;
+}
+.nav_option2 {
+  font-size: 13px;
+  font-weight: 800;
 }
