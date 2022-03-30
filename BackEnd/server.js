@@ -24,26 +24,27 @@ app.get('/api/items', async (req, res) => {
     res.json(allItems);
 })
 
-app.get('/api/items/:id', async (req, res) => { 
-    try {
-        const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) throw Error ("Not a valid MongoDB ObjectID!!!!!!!");
+// app.get('/api/items/:id', async (req, res) => { 
+//     try {
+//         const { id } = req.params;
+//         if (!mongoose.Types.ObjectId.isValid(id)) throw Error ("Not a valid MongoDB ObjectID!!!!!!!");
 
-        const thisItem = await Items.findById(id);
+//         const thisItem = await Items.findById(id);
         
-        if (!thisItem) throw Error ("OH NO! That item was not found.")
+//         if (!thisItem) throw Error ("OH NO! That item was not found.")
 
-        console.log(`specific park should arrive!`)
-        res.json(thisItem);
-    } catch (e) {
-        console.log(e)
-        res.send(`There was AN ERROR!!!  ${e.message}`);
-    }
+//         console.log(`specific park should arrive!`)
+//         res.json(thisItem);
+//     } catch (e) {
+//         console.log(e)
+//         res.send(`There was AN ERROR!!!  ${e.message}`);
+//     }
+// })
+
+app.listen(PORT, function(err){
+    if (err) console.log("Error in server setup")
+    console.log("Server listening on Port", PORT);
 })
 
 
 
-
-app.listen(PORT, () => {
-    console.log(`Express server listening on port ${PORT}`)
-})
