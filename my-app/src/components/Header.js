@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/Header.css'
+// import SearchIcon from '@mui/icons-material/Search';
 
 function Header(props) {
   return (
@@ -8,8 +9,9 @@ function Header(props) {
 
         <div className="header__search">
             <input
-            className="header__searchInput" type="text" value={props.value} placeholder= 'Search one of our many products!'/>
-            <button onClick={props.onSubmit}>Submit</button>
+            className="header__searchInput" type="text" placeholder= "Checkout what we have in stock!" value={props.value} onChange={props.onChange}/>
+            <button onClick={props.onSubmit}className='submit'>Submit</button>
+            {/* <div className='searchIcon'> <SearchIcon /> </div> */}
 
         <div className="header__nav">
 
@@ -36,6 +38,10 @@ function Header(props) {
         </div>
             
 
+        </div>
+
+        <div className="dataResults">
+            
         </div>
 
     </div>
