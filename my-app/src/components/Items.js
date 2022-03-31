@@ -2,60 +2,73 @@ import React, { useEffect, useState } from 'react';
 import {Routes, useParams} from 'react-router-dom'
 
 const Items = (props) => {
-const {items} = props;
-  // let {id} = useParams()
+      const {items} = props
 
-  // const [selectedItems, setItems] = useState('')
+return  (
+  <div>
 
-  // useEffect(() => {
-  //   let selectedItems = props.items.find(
-  //     (items) => items._id === parseInt(id)
-  //   )
-  //   setItems(selectedItems)
-  // }, [props.items, id])
-
-
-// console.log(selectedItems)
-
-//  if ( selectedItems) {
-
-   return  (
-    <div className="products-card" onClick={props.onClick}>
-    <div className="img-wrapper">
-      <img src={props.image} alt={props.image} />
+    <img className="img" src={items.img} alt={items.name}></img>
+    <h3>{items.name}</h3>
+    <div>${items.price}</div>
+    <div>{items.description}</div>
+    <div>
+      <button>Add to Cart</button>
     </div>
-    <div className="info-wrapper flex-col">
-      <h3>{props.name}</h3>
-      <p>Price: ${props.price}</p>
-      <p>{props.img}</p>
-      <p>{props.description}</p>
-    </div>
+
   </div>
       )
     }
-   
-      
     
-// }
-
-export default Items
-
-
-
-
-
-
-
-
-
-
-
-
-// <div className="products-card" onClick={props.onClick}>
-//      <h1> {selectedItems.name} </h1> 
-//         <img src={selectedItems.img} alt='poster'/>
-//         <p> Description: {selectedItems.description}</p>
-//         <div className='ride-details'>
+    
+    
+    
+    export default Items
+    
+    
+    
+  //   <div className="products-card" onClick={props.onClick}>
+  //   <div className="img-wrapper">
+  //     <img src={props.image} alt={props.image} />
+  //   </div>
+  //   <div className="info-wrapper flex-col">
+  //     <h3>{props.name}</h3>
+  //     <p>Price: ${props.price}</p>
+  //     <p>{props.img}</p>
+  //     <p>{props.description}</p>
+  //   </div>
+  // </div>
+  //     )
+  //   }
+    
+    
+    
+    // let {id} = useParams()
+    
+    // const [selectedItems, setItems] = useState('')
+    
+    // useEffect(() => {
+      //   let selectedItems = props.items.find(
+        //     (items) => items._id === parseInt(id)
+        //   )
+        //   setItems(selectedItems)
+        // }, [props.items, id])
+        
+        
+        // console.log(selectedItems)
+        
+        //  if ( selectedItems) {
+          
+          
+          
+          
+          // }
+          
+          
+          // <div className="products-card" onClick={props.onClick}>
+          //      <h1> {selectedItems.name} </h1> 
+          //         <img src={selectedItems.img} alt='poster'/>
+          //         <p> Description: {selectedItems.description}</p>
+          //         <div className='ride-details'>
 //             <h2>Ride Name and Details:</h2>
 //             {selectedItems.map((items) => (
 //                 <div key={items._id}>

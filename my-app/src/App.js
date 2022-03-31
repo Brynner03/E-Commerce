@@ -6,6 +6,7 @@ import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
 import Items from './components/Items'
 import NewItem from './components/NewItem';
+import ViewCart from './pages/ViewCart';
 
 function App() {
 
@@ -20,17 +21,10 @@ function App() {
      })
     }
 
-  const [newItem, setNewItem] = useState({
-    id: '',
-    name: '',
-    price: '',
-    description: '',
-    img: '',
-  })
+ 
 
   useEffect(() => {
     getItems()
-    setItems()
   },[])
 
 // Adding a new item
@@ -58,6 +52,7 @@ function App() {
 
        <Route path="/" element={<Home items={items}/>} />
        {/* <Route path='new' element={ <NewItem newItem={newItem} handleChange={handleChange} addItem={addItem}/>} /> */}
+       <Route path="/cart" element={<ViewCart />} />
         
       </Routes>
     </div>

@@ -5,48 +5,19 @@ import Search from '../components/Search'
 import { useState, useNavigate } from 'react'
 
 function Home(props) {
-
-  // const [searchResults, setSearchResults] = useState([])
-  // const [searchQuery, setSearchQuery] = useState('')
-
-  // const searchOnChange = (e) => {
-  //   const value = e.target.value
-  //   console.log(value)
-  //   setSearchQuery(value)
-  // }
-
-  // const searchOnSubmit = function (e) {
-  //   const items = props.items
-  //   let results = items.filter((items) => {
-  //     return items.name.toLowerCase().includes(searchQuery.toLowerCase())
-  //   })
-  //   console.log(results)
-
-  //   setSearchResults(results)
-  // }
-  // let navigate = useNavigate()
-
-  // const showItems = (items) => {
-  //   navigate(`items/${items._id}`)
-  // }
-
-
-
+  const {items} = props;
+  
+  
+  
   return (
     <div className="home">
       <Header />
-      {/* <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/> */}
         <div className="home_container">
-          <Items />
-          {/* <div className="search">
-        <h3>Showing Results for: {searchQuery}</h3>
-        <section className="search-results container-grid">
-          {searchResults.map((result) => {
-            return <Items key={result._id} onClick={() => showItems(result)} image={result.img} name={result.name} />
-
-          })}
-        </section>
-      </div> */}
+        <div className = "show">
+    {items.map((items) => (
+      <Items key={items._id} items={items} />
+    ))}
+  </div>
             
         </div>
     </div>
@@ -55,6 +26,52 @@ function Home(props) {
 
 export default Home
 
+
+// const [searchResults, setSearchResults] = useState([])
+// const [searchQuery, setSearchQuery] = useState('')
+
+// const searchOnChange = (e) => {
+//   const value = e.target.value
+//   console.log(value)
+//   setSearchQuery(value)
+// }
+
+// const searchOnSubmit = function (e) {
+//   const items = props.items
+//   let results = items.filter((items) => {
+//     return items.name.toLowerCase().includes(searchQuery.toLowerCase())
+//   })
+//   console.log(results)
+
+//   setSearchResults(results)
+// }
+// let navigate = useNavigate()
+
+// const showItems = (items) => {
+//   navigate(`items/${items._id}`)
+// }
+
+
+
+
+
+
+
+
+
+
+
+{/* <Search onSubmit={searchOnSubmit} onChange={searchOnChange} value={searchQuery}/> */}
+
+{/* <div className="search">
+<h3>Showing Results for: {searchQuery}</h3>
+<section className="search-results container-grid">
+{searchResults.map((result) => {
+  return <Items key={result._id} onClick={() => showItems(result)} image={result.img} name={result.name} />
+
+})}
+</section>
+</div> */}
 
 
 

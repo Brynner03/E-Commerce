@@ -3,6 +3,8 @@ import '../styles/Header.css'
 // import SearchIcon from '@mui/icons-material/Search';
 import Search from './Search'
 import NewItem from './NewItem'
+import Route from 'react'
+import ViewCart from '../pages/ViewCart'
 
 
 function Header(props) {
@@ -16,10 +18,10 @@ function Header(props) {
 
         <div className="nav__option">
 
-        <span className="nav__option1">
+        <span className="nav__option1" >
                 View
             </span>
-            <span className="nav_option2">
+            <span className="nav_option2" >
                 Cart
             </span>
         </div>
