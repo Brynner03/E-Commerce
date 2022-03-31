@@ -12,51 +12,34 @@ import { ListItemSecondaryAction } from '@material-ui/core';
 
 function App() {
 
-  // const [cartItems, setCartItems] = useState([])
-  // const onAdd = (items) => {
-  //   const exist = cartItems.find(x => x.id === items.id)
-  //   if (exist) {
-  //     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty + 1} : x))
-  //   } else {
-  //     setCartItems([...cartItems, {...items, qty:1}])
-  //   }
-  // }
-  // const onRemove = (product) => {
-  //   const exist = cartItems.find((x) => x.id === items.id)
-  //   if(exist.qty === 1) {
-  //     setCartItems(cartItems.filter((x) => x.id !== items.id))
-  //   } else {
-  //     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty - 1} : x))
-  //   }
-  // }
-
-
-
+  
+  
+  
 
   const [items, setItems] = useState([])
-
+  
   const getItems = async() => {
-     axios.get('http://localhost:3001/api').then((response)=>{
-       console.log(response.data)
-       setItems(response.data)
-     })
-    }
-
- 
-
+    axios.get('http://localhost:3001/api').then((response)=>{
+      console.log(response.data)
+      setItems(response.data)
+    })
+  }
+  
+  
+  
   useEffect(() => {
     getItems()
   },[])
-
+  
   const[ newItem, setNewItem] = useState({
-
+    
     id:'',
     name:'',
     price:'',
     description:'',
     img:'',
   })
-
+  
   const addItem = (e) => {
     e.preventDefault()
     const currentItem = items
@@ -69,18 +52,18 @@ function App() {
     setItems(currentItem)
     setNewItem({ id: '', name: '',description: '', img: '' })
   }
-
+  
   const handleChange = (e) => {
     setNewItem({ ...newItem, [e.target.name]: e.target.value })
   }
   
-
-
-
-
+  
+  
+  
+  
   
   if(items) {
-
+    
     return (
       <div className="App">
 
@@ -94,6 +77,26 @@ function App() {
 
 }
 export default App;
+
+
+
+// const [cartItems, setCartItems] = useState([])
+// const onAdd = (items) => {
+//   const exist = cartItems.find(x => x.id === items.id)
+//   if (exist) {
+//     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty + 1} : x))
+//   } else {
+//     setCartItems([...cartItems, {...items, qty:1}])
+//   }
+// }
+// const onRemove = (product) => {
+//   const exist = cartItems.find((x) => x.id === items.id)
+//   if(exist.qty === 1) {
+//     setCartItems(cartItems.filter((x) => x.id !== items.id))
+//   } else {
+//     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty - 1} : x))
+//   }
+// }
 
 {/* <Route path='new' element={ <NewItem newItem={newItem} handleChange={handleChange} addItem={addItem}/>} /> */}
 

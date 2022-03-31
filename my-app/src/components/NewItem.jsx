@@ -12,7 +12,7 @@ const NewItem = (props) => {
           description: '',
           location: '',
           address: '',
-          url: '',
+          department: '',
           img: '',
    })
     function submit (e) {
@@ -22,7 +22,7 @@ const NewItem = (props) => {
           description: data.description,
           location: data.location,
           address: data.address,
-          url: data.url,
+          department: data.department,
           img: data.img
         })
         .then(res => {
@@ -44,6 +44,7 @@ const NewItem = (props) => {
       <input type="text" id={'name'} name={'name'} placeholder={'Name'} onChange={(e) => onChange(e)}/>
       <input type="text-area" id={'description'} name={'description'} placeholder={'Description'} onChange={(e) => onChange(e)}/>
       <input type="text" id={'price'} name={'price'} placeholder={'Price'} onChange={(e) => onChange(e)}/>
+      <input type="text" id={'department'} name={'department'} placeholder={'department'} onChange={(e) => onChange(e)}/>
       <input type="text" id={'img'} name={'img'} placeholder={'Image URL'} onChange={(e) => onChange(e)}/>
       <button>Submit</button>
     </form>
