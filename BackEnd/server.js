@@ -47,7 +47,7 @@ app.listen(PORT, function(err){
 })
 
 
-app.post('/api/items/add-new', async (req, res) => {
+app.post('/api/add-new', async (req, res) => {
     try {
         const items = await new Items(req.body);
         await items.save();

@@ -11,25 +11,23 @@ const NewItem = (props) => {
     const url = 'http://localhost:3001/api/add-new'
     const [data, setData] = useState({
           name: '',
+          price: '',
           description: '',
-          location: '',
-          address: '',
-          department: '',
           img: '',
+          department: '',
    })
     function submit (e) {
          e.preventDefault()
          Axios.post(url, {
           name: data.name,
+          price: data.price,
           description: data.description,
-          location: data.location,
-          address: data.address,
+          img: data.img,
           department: data.department,
-          img: data.img
         })
         .then(res => {
            console.log(res.data)
-           navigate('/items')
+           navigate('/')
         })
       }
         function onChange(e) {
