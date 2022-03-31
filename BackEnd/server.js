@@ -59,4 +59,20 @@ app.post('/api/add-new', async (req, res) => {
       }
 })
 
+app.delete('/api/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        if (!mongoose.Types.ObjectId.isValid(id)) throw Error ("Not a valid MongoDB ObjectID!!!!!!!");
+
+        const thisItem = await Items.findById(id);
+        
+        if (!thisItem) throw Error ("OH NO! That Ride was not found.")
+
+        console.log(`specific Item should arrive!`)
+        res.json(thisItem);
+    } catch (e) {
+        console.log(e)
+        res.send(`There was AN ERROR!!!  ${e.message}`);
+    }
+})
 
