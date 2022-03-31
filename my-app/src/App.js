@@ -6,8 +6,7 @@ import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
 import Items from './components/Items'
 import NewItem from './components/NewItem';
-import Cart from './pages/Cart';
-import { ListItemSecondaryAction } from '@material-ui/core';
+
 
 
 function App() {
@@ -36,6 +35,7 @@ function App() {
     id:'',
     name:'',
     price:'',
+    department: '',
     description:'',
     img:'',
   })
@@ -50,7 +50,7 @@ function App() {
     }
     currentItem.push(createdItem)
     setItems(currentItem)
-    setNewItem({ id: '', name: '',description: '', img: '' })
+    setNewItem({ id: '', name: '', price: '', department: '',description: '', img: '' })
   }
   
   const handleChange = (e) => {

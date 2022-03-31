@@ -27,7 +27,7 @@ function Header(props) {
 
         <div className="nav__option">
 
-      <Link to="/cart">Add A New Item</Link>
+      <Link to="/new">Add A New Item</Link>
             
         </div>
         </div>
