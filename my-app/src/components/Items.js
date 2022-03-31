@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import {Routes, useParams} from 'react-router-dom'
 
 const Items = (props) => {
-      const {items} = props
+      const {items, onAdd} = props
 
 return  (
   <div>
 
     <img className="img" src={items.img} alt={items.name}></img>
-    <h3>{items.name}</h3>
-    <div>${items.price}</div>
-    <div>{items.description}</div>
+    <h3 className="name">{items.name}</h3>
+    <div className="price">${items.price}</div>
+    <div className="desc">{items.description}</div>
     <div>
-      <button>Add to Cart</button>
+      <button onClick={onAdd}>Add to Cart</button>
     </div>
 
   </div>

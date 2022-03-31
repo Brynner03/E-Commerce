@@ -4,7 +4,7 @@ import '../styles/Header.css'
 import Search from './Search'
 import NewItem from './NewItem'
 import Route from 'react'
-import ViewCart from '../pages/ViewCart'
+import Cart from '../pages/Cart'
 
 
 function Header(props) {
