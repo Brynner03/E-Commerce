@@ -69,7 +69,7 @@ function App() {
 
       <Routes >
        <Route path="/" element={<Home  items={items}/>} />
-       <Route path="/cart" element={<Cart handleChange={handleChange} newItem={newItem} addItem={addItem} />} />
+       <Route path="/new" element={<NewItem handleChange={handleChange} newItem={newItem} addItem={addItem} />} />
       </Routes>
     </div>
   );

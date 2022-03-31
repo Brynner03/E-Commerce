@@ -2,6 +2,8 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Axios from 'axios'
+import Header from './Header'
+
 
 const NewItem = (props) => {
   let navigate = useNavigate()
@@ -39,6 +41,7 @@ const NewItem = (props) => {
 
   return (
     <div>
+      <Header />
     <h1>Add A New Item</h1>
     <form onSubmit={ submit }>
       <input type="text" id={'name'} name={'name'} placeholder={'Name'} onChange={(e) => onChange(e)}/>

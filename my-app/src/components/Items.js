@@ -10,8 +10,8 @@ return  (
     <img className="img" src={items.img} alt={items.name}></img>
     <h3 className="name">{items.name}</h3>
     <div className="price">${items.price}</div>
-    <div className="desc">{items.description}</div>
     <div className="dept">{items.department}</div>
+    <div className="desc">{items.description}</div>
 
   </div>
       )
