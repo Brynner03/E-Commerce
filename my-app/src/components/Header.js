@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Header.css'
 // import SearchIcon from '@mui/icons-material/Search';
 import Search from './Search'
+import NewItem from './NewItem'
 
 
 function Header(props) {
@@ -21,18 +22,10 @@ function Header(props) {
             <span className="nav_option2">
                 Cart
             </span>
-
         </div>
-
         </div>
-            
-
-        
-
         <div className="dataResults">
-            
         </div>
-
     </div>
   )
 }
