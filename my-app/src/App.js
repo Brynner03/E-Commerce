@@ -4,26 +4,32 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
+import Items from './components/Items'
 
 function App() {
 
-  const getProducts = async() => {
-    const productList = await axios.get('https://localhost:3001/api')
-    console.log(productList)
-    setProducts(productList.data)
-  }
+  const getItems = async() => {
+     axios.get('http://localhost:3001/api').then((response)=>{
+       console.log(response)
+       setItems(response.data)
+     })
+    }
 
-  const [products, setProducts] = useState([])
+  const [Items, setItems] = useState([])
 
   useEffect(() => {
-    getProducts()
+    getItems()
   },[])
+
+  
 
   return (
     <div className="App">
       <Routes >
 
-       <Route path="/" element={<Home products={products}/>} />
+       <Route path="/" element={<Home items={Items}/>} />
+       
+       {/* <Products /> */}
       </Routes>
     </div>
   );
