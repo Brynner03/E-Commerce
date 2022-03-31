@@ -3,7 +3,17 @@ import {Routes, useParams} from 'react-router-dom'
 
 const Items = (props) => {
       const {items, onAdd} = props
-
+    
+      function deleteItem(id){
+        // alert(id)
+        fetch(`http://localhost:3001/api/${id}`, {
+          method:`DELETE`
+        }).then((result)=> {
+          result.json().then((resp)=>{
+            console.warn(resp)
+          })
+        })
+      }
 return  (
   <div>
 
@@ -12,6 +22,7 @@ return  (
     <div className="price">${items.price}</div>
     <div className="dept">{items.department}</div>
     <div className="desc">{items.description}</div>
+    <div><button onClick={()=>deleteItem(items._id)} className="delete">Delete</button></div>
 
   </div>
       )
@@ -24,63 +35,3 @@ return  (
     
     
     
-  //   <div className="products-card" onClick={props.onClick}>
-  //   <div className="img-wrapper">
-  //     <img src={props.image} alt={props.image} />
-  //   </div>
-  //   <div className="info-wrapper flex-col">
-  //     <h3>{props.name}</h3>
-  //     <p>Price: ${props.price}</p>
-  //     <p>{props.img}</p>
-  //     <p>{props.description}</p>
-  //   </div>
-  // </div>
-  //     )
-  //   }
-    
-    
-    
-    // let {id} = useParams()
-    
-    // const [selectedItems, setItems] = useState('')
-    
-    // useEffect(() => {
-      //   let selectedItems = props.items.find(
-        //     (items) => items._id === parseInt(id)
-        //   )
-        //   setItems(selectedItems)
-        // }, [props.items, id])
-        
-        
-        // console.log(selectedItems)
-        
-        //  if ( selectedItems) {
-          
-          
-          
-          
-          // }
-          
-          
-          // <div className="products-card" onClick={props.onClick}>
-          //      <h1> {selectedItems.name} </h1> 
-          //         <img src={selectedItems.img} alt='poster'/>
-          //         <p> Description: {selectedItems.description}</p>
-          //         <div className='ride-details'>
-//             <h2>Ride Name and Details:</h2>
-//             {selectedItems.map((items) => (
-//                 <div key={items._id}>
-//                     <ol>
-//                         <h3>{items.name}</h3>
-//                         <p>{items.description}</p>
-//                         <ul>
-//                             <li>Ride Height: {items.height}</li>
-//                             <li>Ride Length: {items.length}</li>
-//                             <li>Top Speed: {items.speed}</li>
-//                             <li>Steel/Wood: {items.type}</li>
-//                         </ul>
-//                     </ol>
-//                 </div>
-//             ))}
-//         </div>
-//    </div>
