@@ -12,23 +12,23 @@ import { ListItemSecondaryAction } from '@material-ui/core';
 
 function App() {
 
-  const [cartItems, setCartItems] = useState([])
-  const onAdd = (items) => {
-    const exist = cartItems.find(x => x.id === items.id)
-    if (exist) {
-      setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty + 1} : x))
-    } else {
-      setCartItems([...cartItems, {...items, qty:1}])
-    }
-  }
-  const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === items.id)
-    if(exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== items.id))
-    } else {
-      setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty - 1} : x))
-    }
-  }
+  // const [cartItems, setCartItems] = useState([])
+  // const onAdd = (items) => {
+  //   const exist = cartItems.find(x => x.id === items.id)
+  //   if (exist) {
+  //     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty + 1} : x))
+  //   } else {
+  //     setCartItems([...cartItems, {...items, qty:1}])
+  //   }
+  // }
+  // const onRemove = (product) => {
+  //   const exist = cartItems.find((x) => x.id === items.id)
+  //   if(exist.qty === 1) {
+  //     setCartItems(cartItems.filter((x) => x.id !== items.id))
+  //   } else {
+  //     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty - 1} : x))
+  //   }
+  // }
 
 
 
@@ -85,7 +85,7 @@ function App() {
       <div className="App">
 
       <Routes >
-       <Route path="/" element={<Home onAdd={onAdd} items={items}/>} />
+       <Route path="/" element={<Home  items={items}/>} />
        <Route path="/cart" element={<Cart handleChange={handleChange} newItem={newItem} addItem={addItem} />} />
       </Routes>
     </div>
