@@ -5,7 +5,7 @@ function Search(props) {
     <div className="header__search">
             <input
             className="header__searchInput" type="text" placeholder= "Checkout what we have in stock!" value={props.value} onChange={props.onChange}/>
-            <button onClick={props.onSubmit} className='submit'>Submit</button>
+            <button onClick={props.onSubmit} className='submit'>Search</button>
             {/* <div className='searchIcon'> <SearchIcon /> </div> */}
     </div>
   )

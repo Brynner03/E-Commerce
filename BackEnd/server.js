@@ -47,4 +47,16 @@ app.listen(PORT, function(err){
 })
 
 
+app.post('/api/items/add-new', async (req, res) => {
+    try {
+        const items = await new Items(req.body);
+        await items.save();
+        return res.status(201).json({
+          items,
+        });
+      } catch (error) {
+          return res.status(500).json({ error: error.message })
+      }
+})
+
 

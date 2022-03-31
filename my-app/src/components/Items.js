@@ -11,9 +11,7 @@ return  (
     <h3 className="name">{items.name}</h3>
     <div className="price">${items.price}</div>
     <div className="desc">{items.description}</div>
-    <div>
-      <button onClick={onAdd}>Add to Cart</button>
-    </div>
+    <div className="dept">{items.department}</div>
 
   </div>
       )

@@ -5,7 +5,7 @@ import Search from '../components/Search'
 import { useState, useNavigate } from 'react'
 
 function Home(props) {
-  const {items} = props;
+  const {items, onAdd} = props;
   
   
   
@@ -15,7 +15,7 @@ function Home(props) {
         <div className="home_container">
         <div className = "show">
     {items.map((items) => (
-      <Items key={items._id} items={items} />
+      <Items key={items._id} items={items} onAdd={onAdd} />
     ))}
   </div>
             
