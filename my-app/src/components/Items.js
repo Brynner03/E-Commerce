@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState, Fragment } from 'react';
-import {Routes, useParams} from 'react-router-dom'
-import Edit from './Edit';
+import React, { useEffect, useState } from 'react';
+import '../styles/Items.css'
+
 
 const Items = (props) => {
       const {items, onAdd} = props
@@ -24,8 +24,12 @@ return  (
     <h3 className="name">{items.name}</h3>
     <div className="price">${items.price}</div>
     <div className="dept">{items.department}</div>
-    <div className="desc">{items.description}</div>
+    <div className="desc1">Description</div>
+    <div className="description">
+
+    <div className="desc2">{items.description}</div>
   
+    </div>
     <div><button onClick={()=>deleteItem(items._id)} variant="danger" className="delete">Delete</button></div>
 
   </div>

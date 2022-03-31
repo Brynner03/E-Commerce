@@ -1,0 +1,18 @@
+h1{
+    margin-left: 32.5em;
+    justify-content: center;
+    align-items: center;
+
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 70em;
+    margin-left: 25em 
+}
+button {
+    margin-left: 30em;
+}

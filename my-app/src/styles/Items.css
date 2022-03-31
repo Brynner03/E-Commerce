@@ -1,0 +1,26 @@
+img {
+    width: 30em;
+    margin-left: 40em;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.name{
+    margin-left: 42em;
+    margin-top: 1em;
+}
+.price{
+    margin-left:53em;
+}
+.dept{
+    font-weight: 800;
+    margin-left: 53em;
+}
+
+.desc1 {
+    font-weight: 600;
+}
+.desc2{
+    margin: 0 auto;
+
+}

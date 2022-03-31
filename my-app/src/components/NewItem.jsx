@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Axios from 'axios'
 import Header from './Header'
+import '../styles/NewItem.css'
 
 
 const NewItem = (props) => {
