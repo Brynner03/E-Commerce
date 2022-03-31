@@ -2,8 +2,24 @@ import React, { useEffect, useState } from 'react';
 import {Routes, useParams} from 'react-router-dom'
 
 const Items = (props) => {
+const {items} = props;
+  // let {id} = useParams()
 
-  return  (
+  // const [selectedItems, setItems] = useState('')
+
+  // useEffect(() => {
+  //   let selectedItems = props.items.find(
+  //     (items) => items._id === parseInt(id)
+  //   )
+  //   setItems(selectedItems)
+  // }, [props.items, id])
+
+
+// console.log(selectedItems)
+
+//  if ( selectedItems) {
+
+   return  (
     <div className="products-card" onClick={props.onClick}>
     <div className="img-wrapper">
       <img src={props.image} alt={props.image} />
@@ -17,34 +33,18 @@ const Items = (props) => {
   </div>
       )
     }
+   
+      
     
-    
-    
-    
-    
-    export default Items
-    
-    
-    
-    
-    
-    
-    // let {id} = useParams()
-  
-    // const [selectedItems, setItems] = useState('')
-  
-    // useEffect(() => {
-    //   let selectedItems = props.items.find(
-    //     (items) => items._id === parseInt(id)
-    //   )
-    //   setItems(selectedItems)
-    // }, [props.items, id])
-  
-  
-  // console.log(selectedItems)
-  
-  //  if ( selectedItems) {
-  // }
+// }
+
+export default Items
+
+
+
+
+
+
 
 
 

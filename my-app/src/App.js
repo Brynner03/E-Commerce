@@ -9,14 +9,17 @@ import NewItem from './components/NewItem';
 
 function App() {
 
+  
+
+  const [items, setItems] = useState([])
+
   const getItems = async() => {
      axios.get('http://localhost:3001/api').then((response)=>{
-       console.log(response)
+       console.log(response.data)
        setItems(response.data)
      })
     }
 
-  const [items, setItems] = useState([])
   const [newItem, setNewItem] = useState({
     id: '',
     name: '',
@@ -27,6 +30,7 @@ function App() {
 
   useEffect(() => {
     getItems()
+    setItems()
   },[])
 
 // Adding a new item
@@ -52,9 +56,9 @@ function App() {
     <div className="App">
       <Routes >
 
-       <Route path="/" element={<Home items={Items}/>} />
+       <Route path="/" element={<Home items={items}/>} />
        {/* <Route path='new' element={ <NewItem newItem={newItem} handleChange={handleChange} addItem={addItem}/>} /> */}
-     
+        
       </Routes>
     </div>
   );

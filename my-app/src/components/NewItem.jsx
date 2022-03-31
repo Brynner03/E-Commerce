@@ -27,7 +27,7 @@ const NewItem = (props) => {
         })
         .then(res => {
            console.log(res.data)
-           navigate('/parks')
+           navigate('/items')
         })
       }
         function onChange(e) {
