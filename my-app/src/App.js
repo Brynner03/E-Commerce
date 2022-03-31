@@ -4,8 +4,9 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home';
-import Items from './components/Items'
+
 import NewItem from './components/NewItem';
+
 
 
 
@@ -58,7 +59,7 @@ function App() {
   }
   
   
-  
+
   
   
   
@@ -69,6 +70,7 @@ function App() {
 
       <Routes >
        <Route path="/" element={<Home  items={items}/>} />
+ 
        <Route path="/new" element={<NewItem handleChange={handleChange} newItem={newItem} addItem={addItem} />} />
       </Routes>
     </div>
