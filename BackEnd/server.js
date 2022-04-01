@@ -24,22 +24,6 @@ app.get('/api/', async (req, res) => {
     res.json(allItems);
 })
 
-// app.get('/api/items/:id', async (req, res) => { 
-//     try {
-//         const { id } = req.params;
-//         if (!mongoose.Types.ObjectId.isValid(id)) throw Error ("Not a valid MongoDB ObjectID!!!!!!!");
-
-//         const thisItem = await Items.findById(id);
-        
-//         if (!thisItem) throw Error ("OH NO! That item was not found.")
-
-//         console.log(`specific park should arrive!`)
-//         res.json(thisItem);
-//     } catch (e) {
-//         console.log(e)
-//         res.send(`There was AN ERROR!!!  ${e.message}`);
-//     }
-// })
 
 app.listen(PORT, function(err){
     if (err) console.log("Error in server setup")
@@ -61,18 +45,19 @@ app.post('/api/add-new', async (req, res) => {
 
 app.delete('/api/:id', async (req, res) => {
     try {
-        const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) throw Error ("Not a valid MongoDB ObjectID!!!!!!!");
-
-        const thisItem = await Items.findById(id);
-        
-        if (!thisItem) throw Error ("OH NO! That Ride was not found.")
-
-        console.log(`specific Item should arrive!`)
-        res.json(thisItem);
-    } catch (e) {
-        console.log(e)
-        res.send(`There was AN ERROR!!!  ${e.message}`);
+        const { id } = req.params
+        const deleted = await Items.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Item deleted')
+        }
+        throw new Error('User not found!')
     }
+    catch (err) {
+        return res.status(500).send(err.message)
+    }
+    
+    
+    
 })
+
 

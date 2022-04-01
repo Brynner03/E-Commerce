@@ -12,10 +12,6 @@ import NewItem from './components/NewItem';
 
 function App() {
 
-  
-  
-  
-
   const [items, setItems] = useState([])
   
   const getItems = async() => {
@@ -58,11 +54,6 @@ function App() {
     setNewItem({ ...newItem, [e.target.name]: e.target.value })
   }
   
-  
-
-  
-  
-  
   if(items) {
     
     return (
@@ -75,47 +66,9 @@ function App() {
       </Routes>
     </div>
   );
+} else {
+  return "Loading..."
 }
 
 }
 export default App;
-
-
-
-// const [cartItems, setCartItems] = useState([])
-// const onAdd = (items) => {
-//   const exist = cartItems.find(x => x.id === items.id)
-//   if (exist) {
-//     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty + 1} : x))
-//   } else {
-//     setCartItems([...cartItems, {...items, qty:1}])
-//   }
-// }
-// const onRemove = (product) => {
-//   const exist = cartItems.find((x) => x.id === items.id)
-//   if(exist.qty === 1) {
-//     setCartItems(cartItems.filter((x) => x.id !== items.id))
-//   } else {
-//     setCartItems(cartItems.map(x => x.id === items.id ? {...exist, qty: exist.qty - 1} : x))
-//   }
-// }
-
-{/* <Route path='new' element={ <NewItem newItem={newItem} handleChange={handleChange} addItem={addItem}/>} /> */}
-
-// Adding a new item
-  // const addItem = (e) => {
-  //   e.preventDefault()
-  //   const currentItems = items
-  //   const createdItem = {
-  //     ...newItem,
-  //     id: parseInt(items.length + 1),
-  //     price: parseInt(newItem.price)
-  //   }
-  //   currentItems.push(createdItem)
-  //   setItems(currentItems)
-  //   setNewItem({ id: '', description: '', location: '', address: '', url: '', img: '' })
-  // }
-
-  // const handleChange = (e) => {
-  //   setNewItem({ ...newItem, [e.target.name]: e.target.value })
-  // }

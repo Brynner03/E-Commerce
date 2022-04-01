@@ -6,7 +6,7 @@ import '../styles/Items.css'
 const Items = (props) => {
       const {items, onAdd} = props
     
-      function deleteItem(id){
+      const deleteItem = async(id)=>{
         // alert(id)
         axios.delete(`http://localhost:3001/api/${id}`)
         .then(res => {
@@ -19,7 +19,7 @@ const Items = (props) => {
 
 
 return  (
-  <div>
+  <div className= 'whole' >
     <img className="img" src={items.img} alt={items.name}></img>
     <h3 className="name">{items.name}</h3>
     <div className="price">${items.price}</div>

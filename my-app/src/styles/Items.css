@@ -1,20 +1,21 @@
 img {
     width: 30em;
-    margin-left: 40em;
+    margin-left: 45em;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    margin-top: 2em;
 }
 .name{
-    margin-left: 42em;
+    margin-left: 43em;
     margin-top: 1em;
 }
 .price{
-    margin-left:53em;
+    margin-left:55em;
 }
 .dept{
     font-weight: 800;
-    margin-left: 53em;
+    margin-left: 55em;
 }
 
 .desc1 {
@@ -23,4 +24,12 @@ img {
 .desc2{
     margin: 0 auto;
 
+}
+.delete{
+    margin-left: 60em;
+    margin-bottom: 2em;
+}
+.whole{
+    border: 2px solid black;
+    margin-top: 3em;
 }
