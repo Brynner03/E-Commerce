@@ -5,6 +5,7 @@ const logger = require('morgan')
 const bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
+const apiUpdateAnItem = 'http://localhost:3001/update_item'
 
 const { Items } = require('./models')
 
@@ -55,9 +56,5 @@ app.delete('/api/:id', async (req, res) => {
     catch (err) {
         return res.status(500).send(err.message)
     }
-    
-    
-    
 })
-
 

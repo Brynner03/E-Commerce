@@ -14,7 +14,7 @@ const Items = (props) => {
         }).catch(err => console.log(err))
         }
         
-      
+ 
 
 
 
@@ -26,11 +26,10 @@ return  (
     <div className="dept">{items.department}</div>
     <div className="desc1">Description</div>
     <div className="description">
-
     <div className="desc2">{items.description}</div>
-  
     </div>
     <div><button onClick={()=>deleteItem(items._id)} variant="danger" className="delete">Delete</button></div>
+    {/* <div><button onClick={()=>updateItem(items._id)} variant="danger" className="delete">Update</button></div> */}
 
   </div>
       )

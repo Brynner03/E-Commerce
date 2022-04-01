@@ -58,10 +58,8 @@ function App() {
     
     return (
       <div className="App">
-
       <Routes >
        <Route path="/" element={<Home  items={items}/>} />
- 
        <Route path="/new" element={<NewItem handleChange={handleChange} newItem={newItem} addItem={addItem} />} />
       </Routes>
     </div>
