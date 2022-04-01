@@ -51,10 +51,23 @@ app.delete('/api/:id', async (req, res) => {
         if (deleted) {
             return res.status(200).send('Item deleted')
         }
-        throw new Error('User not found!')
+        throw new Error('Item not found!')
     }
     catch (err) {
         return res.status(500).send(err.message)
     }
 })
 
+app.put('/api/update/:id', async (req,res) => {
+    try {
+        const {id} = req.params
+        const updated = await Items.findByIdAndUpdate(id)
+        if(updated) {
+            return res.status(200).send(`${id} has been updated`)
+        }
+        throw new Error('Item was not found')
+    }
+    catch (err) {
+        return res.status(500).send(err.message)
+    }
+})
